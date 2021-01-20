@@ -1,0 +1,95 @@
+:root {
+  --welcome-color: steelblue;
+  --page-1-color: tan;
+  --page-2-color: teal;
+  --page-3-color: slateblue;
+  --animate-speed: 1s;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+  color: #fff;
+}
+
+/* Page colors */
+#welcome-page {
+  background-color: var(--welcome-color);
+}
+#page-1 {
+  background-color: var(--page-1-color);
+}
+#page-2 {
+  background-color: var(--page-2-color);
+}
+#page-3 {
+  background-color: var(--page-3-color);
+}
+
+/* Page class */
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  padding: 0 3rem;
+}
+
+.page h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+}
+
+.page p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #f4f4f4;
+  padding: 1.5rem 3rem;
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  color: #333;
+  transition: all 0.2s ease-in;
+}
+
+.btn:hover,
+.btn-dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Animation */
+#welcome-page h1 {
+  transform: translateY(-25rem);
+  animation: wel-head 1s ease-out forwards;
+}
+
+#welcome-page p {
+  transform: translateX(-100rem);
+  animation: p-head var(--animate-speed) ease-out 1s forwards;
+}
+
+@keyframes wel-head {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes p-head {
+  to {
+    transform: translateX(0rem);
+  }
+}
